@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - CV Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="print.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-indigo-50 pt-16">
+    <nav class="fixed top-0 left-0 w-full z-50 border-b border-gray-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4">
+            <div class="flex h-16 items-center justify-between">
+
+                <!-- Logo -->
+                <a href="index.html" class="text-lg font-semibold text-gray-900">
+                    CV Portal
+                </a>
+
+                <!-- Desktop links -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link"><span class="nav-text">Home</span></a>
+                    <a href="portfolio.html" class="nav-link"><span class="nav-text">Portfolio</span></a>
+                    <a href="about.html" class="nav-link"><span class="nav-text">About</span></a>
+                    <a href="cv.html" class="nav-link active"><span class="nav-text">CV</span></a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="menuBtn" class="md:hidden text-gray-700 text-xl">
+                    ☰
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200 bg-white">
+            <div class="px-4 py-3 space-y-2">
+                <a href="index.html" class="block nav-link"><span class="nav-text">Home</span></a>
+                <a href="portfolio.html" class="block nav-link"><span class="nav-text">Portfolio</span></a>
+                <a href="about.html" class="block nav-link"><span class="nav-text">About</span></a>
+                <a href="cv.html" class="block nav-link active"><span class="nav-text">CV</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <!-- CV Header -->
+        <section
+            class="min-h-screen bg-gradient-to-b from-indigo-50 flex flex-col items-center justify-center text-center py-20">
+            <h1 class="text-4xl md:text-5xl font-bold text-indigo-900 mb-4">Curriculum Vitae</h1>
+            <p class="text-indigo-800 text-lg mb-6">Fullstack Developer | Cosmic Explorer | Architect of Digital
+                Galaxies</p>
+            <img src="https://images.pexels.com/photos/7170706/pexels-photo-7170706.jpeg" alt="Astronaut portrait"
+                class="rounded-full shadow-2xl w-64 md:w-80 lg:w-96 mb-6">
+        </section>
+
+        <!-- Education Section -->
+        <section class="py-16 px-6 md:px-12 max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-indigo-900 mb-8">Education</h2>
+            <ul class="space-y-6">
+                <li>
+                    <h3 class="text-xl font-semibold text-indigo-800">MSc Computer Science - Galactic University</h3>
+                    <p class="text-gray-700">2018 - 2020 | Explored advanced fullstack technologies and interstellar
+                        algorithms.</p>
+                </li>
+                <li>
+                    <h3 class="text-xl font-semibold text-indigo-800">BSc Software Engineering - Cosmic College</h3>
+                    <p class="text-gray-700">2014 - 2018 | Built a foundation in programming, web development, and UI
+                        design.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="py-16 px-6 md:px-12 max-w-6xl mx-auto bg-indigo-50">
+            <h2 class="text-3xl font-bold text-indigo-900 mb-8">Experience</h2>
+            <ul class="space-y-6">
+                <li>
+                    <h3 class="text-xl font-semibold text-indigo-800">Lead Fullstack Developer - Starship Labs</h3>
+                    <p class="text-gray-700">2021 - Present | Architected cosmic-scale applications and designed
+                        interstellar APIs.</p>
+                </li>
+                <li>
+                    <h3 class="text-xl font-semibold text-indigo-800">Front-End Developer - Nebula Web Studio</h3>
+                    <p class="text-gray-700">2020 - 2021 | Built interactive web experiences with a touch of cosmic
+                        magic.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="py-16 px-6 md:px-12 max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-indigo-900 mb-8">Skills</h2>
+            <div class="flex flex-wrap gap-4">
+                <span class="bg-indigo-100 text-indigo-800 font-semibold px-4 py-2 rounded-full">JavaScript</span>
+                <span class="bg-indigo-100 text-indigo-800 font-semibold px-4 py-2 rounded-full">React</span>
+                <span class="bg-indigo-100 text-indigo-800 font-semibold px-4 py-2 rounded-full">Node.js</span>
+                <span class="bg-indigo-100 text-indigo-800 font-semibold px-4 py-2 rounded-full">Tailwind CSS</span>
+                <span class="bg-indigo-100 text-indigo-800 font-semibold px-4 py-2 rounded-full">MongoDB</span>
+                <span class="bg-indigo-100 text-indigo-800 font-semibold px-4 py-2 rounded-full">Express.js</span>
+                <span class="bg-indigo-100 text-indigo-800 font-semibold px-4 py-2 rounded-full">REST APIs</span>
+                <span class="bg-indigo-100 text-indigo-800 font-semibold px-4 py-2 rounded-full">GraphQL</span>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-16 px-6 md:px-12 max-w-6xl mx-auto bg-indigo-50 text-center">
+            <h2 class="text-3xl font-bold text-indigo-900 mb-4">Contact Me</h2>
+            <p class="text-indigo-800 mb-6">Reach out across the cosmic network:</p>
+            <div class="flex justify-center gap-6 flex-wrap">
+                <a href="#" class="text-indigo-600 hover:text-indigo-800 font-semibold">GitHub</a>
+                <a href="#" class="text-indigo-600 hover:text-indigo-800 font-semibold">LinkedIn</a>
+                <a href="#" class="text-indigo-600 hover:text-indigo-800 font-semibold">Email</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 1337 Easter Egg Modal -->
+    <div id="leetEgg" class="fixed inset-0 flex items-center justify-center z-50 hidden bg-white/20 backdrop-blur-sm">
+        <div class="bg-indigo-50 rounded-xl max-w-md w-full p-6 relative shadow-xl text-center">
+            <button id="leetClose"
+                class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-xl font-bold">&times;</button>
+            <h3 class="text-2xl font-bold text-indigo-900 mb-4">🎉 1337 Alert!</h3>
+            <p class="text-indigo-800 mb-4">
+                You typed "1337"! Sebastian's spaghetti code has fully awakened.
+                The cosmos bows to your elite skills.
+            </p>
+            <img src="https://placeholdpicsum.dev/photo/seed/alien/150/150" alt="Alien" class="mx-auto">
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

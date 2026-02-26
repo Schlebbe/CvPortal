@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - CV Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <nav class="fixed top-0 left-0 w-full z-50 border-b border-gray-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4">
+            <div class="flex h-16 items-center justify-between">
+
+                <!-- Logo -->
+                <a href="index.html" class="text-lg font-semibold text-gray-900">
+                    CV Portal
+                </a>
+
+                <!-- Desktop links -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link"><span class="nav-text">Home</span></a>
+                    <a href="portfolio.html" class="nav-link"><span class="nav-text">Portfolio</span></a>
+                    <a href="about.html" class="nav-link active"><span class="nav-text">About</span></a>
+                    <a href="cv.html" class="nav-link"><span class="nav-text">CV</span></a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="menuBtn" class="md:hidden text-gray-700 text-xl">
+                    ☰
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200 bg-white">
+            <div class="px-4 py-3 space-y-2">
+                <a href="index.html" class="block nav-link"><span class="nav-text">Home</span></a>
+                <a href="portfolio.html" class="block nav-link"><span class="nav-text">Portfolio</span></a>
+                <a href="about.html" class="block nav-link active"><span class="nav-text">About</span></a>
+                <a href="cv.html" class="block nav-link"><span class="nav-text">CV</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <!-- About Page Section -->
+        <section class="min-h-screen bg-gradient-to-b from-indigo-50 flex items-center py-20">
+            <div class="container mx-auto px-6 md:px-12 flex flex-col-reverse md:flex-row items-center gap-12">
+
+                <!-- Text content -->
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h1 class="text-4xl md:text-5xl font-bold text-indigo-900 mb-4">
+                        About Me
+                    </h1>
+                    <p class="text-indigo-800 mb-6">
+                        Greetings! I’m Sebastian Enerstrand, a fullstack developer and cosmic adventurer.
+                        I traverse the universe of code, exploring galaxies of frameworks, planets of APIs, and nebulae
+                        of ideas.
+                    </p>
+                    <p class="text-indigo-800 mb-6">
+                        My mission is to craft websites and apps that feel like portals to other dimensions — intuitive,
+                        magical, and slightly unpredictable.
+                        When not coding, I chart stars, sketch alien worlds, or imagine interstellar civilizations
+                        waiting to be discovered.
+                    </p>
+                    <p class="text-indigo-800 mb-6">
+                        Whether building scalable backends or enchanting frontends, I approach each project with
+                        curiosity, creativity, and a dash of cosmic mischief.
+                        Let’s explore the universe of possibilities together! 🚀✨
+                    </p>
+                </div>
+
+                <!-- Image -->
+                <div class="md:w-1/2 flex justify-center md:justify-end">
+                    <img src="https://images.pexels.com/photos/7170706/pexels-photo-7170706.jpeg"
+                        alt="Astronaut portrait" class="rounded-full shadow-2xl w-64 md:w-80 lg:w-96">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 1337 Easter Egg Modal -->
+    <div id="leetEgg" class="fixed inset-0 flex items-center justify-center z-50 hidden bg-white/20 backdrop-blur-sm">
+        <div class="bg-indigo-50 rounded-xl max-w-md w-full p-6 relative shadow-xl text-center">
+            <button id="leetClose"
+                class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-xl font-bold">&times;</button>
+            <h3 class="text-2xl font-bold text-indigo-900 mb-4">🎉 1337 Alert!</h3>
+            <p class="text-indigo-800 mb-4">
+                You typed "1337"! Sebastian's spaghetti code has fully awakened.
+                The cosmos bows to your elite skills.
+            </p>
+            <img src="https://placeholdpicsum.dev/photo/seed/alien/150/150" alt="Alien" class="mx-auto">
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
