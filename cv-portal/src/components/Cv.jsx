@@ -1,5 +1,6 @@
 import cvData from "../assets/cvData.json";
 import { useState } from "react";
+import "../assets/print.css";
 
 function Cv({ handleAstronautClick, bgColor }) {
     return (
