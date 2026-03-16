@@ -1,0 +1,45 @@
+{
+    "header": {
+        "name": "Sebastian Enerstrand",
+        "title": "Fullstack Developer | Cosmic Explorer | Architect of Digital Galaxies",
+        "photo": "https://images.pexels.com/photos/7170706/pexels-photo-7170706.jpeg"
+    },
+    "education": [
+        {
+            "degree": "MSc Computer Science",
+            "school": "Galactic University",
+            "years": "2018 - 2020",
+            "description": "Explored advanced fullstack technologies and interstellar algorithms."
+        },
+        {
+            "degree": "BSc Software Engineering",
+            "school": "Cosmic College",
+            "years": "2014 - 2018",
+            "description": "Built a foundation in programming, web development, and UI design."
+        }
+    ],
+    "experience": [
+        {
+            "position": "Lead Fullstack Developer",
+            "company": "Starship Labs",
+            "years": "2021 - Present",
+            "description": "Architected cosmic-scale applications and designed interstellar APIs."
+        },
+        {
+            "position": "Front-End Developer",
+            "company": "Nebula Web Studio",
+            "years": "2020 - 2021",
+            "description": "Built interactive web experiences with a touch of cosmic magic."
+        }
+    ],
+    "skills": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Tailwind CSS",
+        "MongoDB",
+        "Express.js",
+        "REST APIs",
+        "GraphQL"
+    ]
+}
