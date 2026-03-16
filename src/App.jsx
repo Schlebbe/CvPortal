@@ -25,7 +25,7 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home handleAstronautClick={handleAstronautClick} bgColor={bgColor} />} />
         <Route path="/portfolio" element={<Portfolio handleAstronautClick={handleAstronautClick} bgColor={bgColor} />} />
         <Route path="/about" element={<About handleAstronautClick={handleAstronautClick} bgColor={bgColor} />} />
         <Route path="/cv" element={<Cv handleAstronautClick={handleAstronautClick} bgColor={bgColor} />} />
