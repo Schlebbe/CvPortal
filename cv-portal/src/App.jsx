@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Portfolio from './components/Portfolio';
 import About from './components/About';
 import Cv from './components/Cv';
+import EasterEggModal from './components/EasterEggModal';
 // import Footer from './components/Footer';
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/cv" element={<Cv />} />
       </Routes>
+
+      <EasterEggModal />
 
       {/* <Footer /> */}
     </BrowserRouter>
