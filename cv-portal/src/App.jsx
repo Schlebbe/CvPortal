@@ -7,7 +7,7 @@ import Portfolio from './components/Portfolio';
 import About from './components/About';
 import Cv from './components/Cv';
 import EasterEggModal from './components/EasterEggModal';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -25,7 +25,7 @@ function App() {
 
       <EasterEggModal />
 
-      {/* <Footer /> */}
+      <Footer />
     </BrowserRouter>
   )
 }
