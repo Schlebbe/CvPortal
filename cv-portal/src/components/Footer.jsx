@@ -10,8 +10,8 @@ function Footer() {
                 <a href="https://www.linkedin.com"
                     className="text-indigo-600 hover:text-indigo-800 font-semibold"
                     target="_blank">LinkedIn</a>
-                <a href="#" 
-                    className="text-indigo-600 hover:text-indigo-800 font-semibold" 
+                <a href="#"
+                    className="text-indigo-600 hover:text-indigo-800 font-semibold"
                     target="_blank">Email</a>
             </div>
         </footer >
