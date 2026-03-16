@@ -1,7 +1,7 @@
 
-function About() {
+function About({ handleAstronautClick, bgColor }) {
     return (
-        <main className="page-content">
+        <main style={{ backgroundColor: bgColor }} className="page-content">
             {/* <!-- About Page Section --> */}
             <section className="min-h-screen bg-gradient-to-b from-indigo-50 flex items-center py-20">
                 <div className="container mx-auto px-6 md:px-12 flex flex-col-reverse md:flex-row items-center gap-12">
@@ -32,7 +32,8 @@ function About() {
                     {/* <!-- Image --> */}
                     <div className="md:w-1/2 flex justify-center md:justify-end">
                         <img src="https://images.pexels.com/photos/7170706/pexels-photo-7170706.jpeg"
-                            alt="Astronaut portrait" className="rounded-full shadow-2xl w-64 md:w-80 lg:w-96" />
+                            alt="Astronaut portrait" className="rounded-full shadow-2xl w-64 md:w-80 lg:w-96"
+                            onClick={handleAstronautClick} />
                     </div>
                 </div>
             </section>

@@ -1,8 +1,9 @@
 import cvData from "../assets/cvData.json";
+import { useState } from "react";
 
-function Cv() {
+function Cv({ handleAstronautClick, bgColor }) {
     return (
-        <main className="page-content">
+        <main style={{ backgroundColor: bgColor }} className="page-content bg-indigo-50 pt-16">
             {/* Header */}
             <section className="min-h-screen bg-gradient-to-b from-indigo-50 flex flex-col items-center justify-center text-center py-20">
                 <h1 className="text-4xl md:text-5xl font-bold text-indigo-900 mb-4">{cvData.header.name}</h1>
@@ -10,7 +11,8 @@ function Cv() {
                 <img
                     src={cvData.header.photo}
                     alt={`${cvData.header.name} portrait`}
-                    className="rounded-full shadow-2xl w-64 md:w-80 lg:w-96 mb-6" />
+                    className="rounded-full shadow-2xl w-64 md:w-80 lg:w-96 mb-6"
+                    onClick={handleAstronautClick} />
             </section>
 
             {/* Education */}

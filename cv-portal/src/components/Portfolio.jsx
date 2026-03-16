@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-function Portfolio() {
+function Portfolio({ handleAstronautClick, bgColor }) {
     const localProjects = [
         {
             id: "modal1",
@@ -76,10 +76,11 @@ function Portfolio() {
     }, []);
 
     return (
-        <main className="page-content">
+        <main style={{ backgroundColor: bgColor }} className="page-content">
             <section className="py-20 from-indigo-50">
                 <div className="container mx-auto px-6 md:px-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 text-center mb-12">
+                    <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 text-center mb-12"
+                        onClick={handleAstronautClick}>
                         Cosmic Creations
                     </h2>
 
