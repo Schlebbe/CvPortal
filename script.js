@@ -1,14 +1,3 @@
-/*****************************Navbar************************************/
-// Mobile menu toggle
-const menuBtn = document.getElementById("menuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
-
-menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-});
-
-/*****************************Navbar************************************/
-
 /*****************************Modals************************************/
 document.querySelectorAll('[data-modal]').forEach(card => {
     card.addEventListener('click', () => {
