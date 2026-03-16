@@ -1,153 +1,16 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cv Portal</title>
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-
-<body>
-    <nav class="fixed top-0 left-0 w-full z-50 border-b border-gray-200 bg-white">
-        <div class="mx-auto max-w-6xl px-4">
-            <div class="flex h-16 items-center justify-between">
-
-                <!-- Logo -->
-                <a href="index.html" class="text-lg font-semibold text-gray-900">
-                    CV Portal
-                </a>
-
-                <!-- Desktop links -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="nav-link active"><span class="nav-text">Home</span></a>
-                    <a href="portfolio.html" class="nav-link"><span class="nav-text">Portfolio</span></a>
-                    <a href="about.html" class="nav-link"><span class="nav-text">About</span></a>
-                    <a href="cv.html" class="nav-link"><span class="nav-text">CV</span></a>
-                </div>
-
-                <!-- Mobile menu button -->
-                <button id="menuBtn" class="md:hidden text-gray-700 text-xl">
-                    ☰
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile menu -->
-        <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200 bg-white">
-            <div class="px-4 py-3 space-y-2">
-                <a href="index.html" class="block nav-link active"><span class="nav-text">Home</span></a>
-                <a href="portfolio.html" class="block nav-link"><span class="nav-text">Portfolio</span></a>
-                <a href="about.html" class="block nav-link"><span class="nav-text">About</span></a>
-                <a href="cv.html" class="block nav-link"><span class="nav-text">CV</span></a>
-            </div>
-        </div>
-    </nav>
-
-    <main class="page-content">
-        <!-- Hero Section -->
-        <section class="min-h-screen bg-gradient-to-b from-indigo-50 flex items-center">
-            <div class="container mx-auto px-6 md:px-12 flex flex-col-reverse md:flex-row items-center gap-12">
-
-                <!-- Text -->
-                <div class="md:w-1/2 text-center md:text-left">
-                    <h1 class="text-4xl md:text-5xl font-bold text-indigo-900 mb-4">
-                        Greetings, I’m Sebastian Enerstrand
-                    </h1>
-                    <p class="text-indigo-800 mb-6 text-lg">
-                        Fullstack developer, cosmic explorer, and architect of digital galaxies.
-                        I craft interfaces and code that feel like portals to other dimensions.
-                    </p>
-                    <a href="portfolio.html"
-                        class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition">
-                        Explore My Universe
-                    </a>
-                </div>
-
-                <!-- Hero Image -->
-                <div class="md:w-1/2 flex justify-center md:justify-end">
-                    <img src="https://images.pexels.com/photos/7170706/pexels-photo-7170706.jpeg"
-                        alt="Astronaut portrait" class="rounded-full shadow-2xl w-64 md:w-80 lg:w-96">
-                </div>
-
-            </div>
-        </section>
-
-        <section class="py-20 bg-indigo-50">
-            <div class="container mx-auto px-6 md:px-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-indigo-900 text-center mb-12">
-                    Cosmic Creations – A Glimpse
-                </h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                    <!-- Teaser Project 1 -->
-                    <div
-                        class="bg-white shadow-xl rounded-lg overflow-hidden hover:scale-105 transition cursor-pointer">
-                        <img src="https://placeholdpicsum.dev/photo/seed/nebula1/600/400" alt="Project 1"
-                            class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-indigo-800 mb-2">Star Map Visualizer</h3>
-                            <p class="text-gray-700 mb-4">Explore star systems and nebulae with interactive visuals.</p>
-                        </div>
-                    </div>
-
-                    <!-- Teaser Project 2 -->
-                    <div
-                        class="bg-white shadow-xl rounded-lg overflow-hidden hover:scale-105 transition cursor-pointer">
-                        <img src="https://placeholdpicsum.dev/photo/seed/spacecraft/600/400" alt="Project 2"
-                            class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-indigo-800 mb-2">Spacecraft Dashboard</h3>
-                            <p class="text-gray-700 mb-4">Simulated spacecraft control interface with futuristic UI.</p>
-                        </div>
-                    </div>
-
-                    <!-- Teaser Project 3 -->
-                    <div
-                        class="bg-white shadow-xl rounded-lg overflow-hidden hover:scale-105 transition cursor-pointer">
-                        <img src="https://placeholdpicsum.dev/photo/seed/galaxy/600/400" alt="Project 3"
-                            class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-indigo-800 mb-2">Galaxy Explorer App</h3>
-                            <p class="text-gray-700 mb-4">Traverse virtual galaxies and discover interactive cosmic
-                                stories.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer / Social Links -->
-        <footer class="py-6 bg-indigo-100 text-center">
-            <p class="text-indigo-900 mb-4">Connect with me across the cosmos:</p>
-            <div class="flex justify-center space-x-6">
-                <a href="http://github.com/Schlebbe"
-                    class="text-indigo-600 hover:text-indigo-800 font-semibold">GitHub</a>
-                <a href="https://www.linkedin.com"
-                    class="text-indigo-600 hover:text-indigo-800 font-semibold">LinkedIn</a>
-                <a href="#" class="text-indigo-600 hover:text-indigo-800 font-semibold">Email</a>
-            </div>
-        </footer>
-    </main>
-
-    <!-- 1337 Easter Egg Modal -->
-    <div id="leetEgg" class="fixed inset-0 flex items-center justify-center z-50 hidden bg-white/20 backdrop-blur-sm">
-        <div class="bg-indigo-50 rounded-xl max-w-md w-full p-6 relative shadow-xl text-center">
-            <button id="leetClose"
-                class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-xl font-bold">&times;</button>
-            <h3 class="text-2xl font-bold text-indigo-900 mb-4">🎉 1337 Alert!</h3>
-            <p class="text-indigo-800 mb-4">
-                You typed "1337"! Sebastian's spaghetti code has fully awakened.
-                The cosmos bows to your elite skills.
-            </p>
-            <img src="https://placeholdpicsum.dev/photo/seed/alien/150/150" alt="Alien" class="mx-auto">
-        </div>
-    </div>
-
-    <script src="script.js" defer></script>
-</body>
-
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
