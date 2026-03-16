@@ -1,9 +1,7 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 function Portfolio() {
-    const [modalOpen, setModalOpen] = useState(null);
-
-    const projects = [
+    const localProjects = [
         {
             id: "modal1",
             title: "Star Map Visualizer",
@@ -48,32 +46,65 @@ function Portfolio() {
         },
     ];
 
+    const [projects, setProjects] = useState(localProjects);
+    const [loading, setLoading] = useState(true);
+    const [modalOpen, setModalOpen] = useState(null);
+
+    useEffect(() => {
+        const fetchGithubRepos = async () => {
+            try {
+                const response = await fetch("https://api.github.com/users/Schlebbe/repos");
+                const data = await response.json();
+
+                const githubProjects = data.map((repo) => ({
+                    id: repo.id,
+                    title: repo.name,
+                    desc: repo.description || "No description",
+                    img: "https://opengraph.githubassets.com/1/Schlebbe/my-repo",
+                    link: repo.html_url,
+                }));
+
+                setProjects([...localProjects, ...githubProjects]);
+            } catch (error) {
+                console.error("Error fetching GitHub repos:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchGithubRepos();
+    }, []);
+
     return (
-        <main class="page-content">
-            <section class="py-20 from-indigo-50">
-                <div class="container mx-auto px-6 md:px-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-indigo-900 text-center mb-12">
+        <main className="page-content">
+            <section className="py-20 from-indigo-50">
+                <div className="container mx-auto px-6 md:px-12">
+                    <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 text-center mb-12">
                         Cosmic Creations
                     </h2>
 
-                    {/* <!-- Projects Grid --> */}
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {projects.map((proj) => (
-                            <div
-                                key={proj.id}
-                                className="bg-white shadow-xl rounded-lg overflow-hidden hover:scale-105 transition cursor-pointer"
-                                onClick={() => setModalOpen(proj.id)}>
-                                <img
-                                    src={proj.img}
-                                    alt={proj.title}
-                                    className="w-full h-48 object-cover" />
-                                <div className="p-6">
-                                    <h3 className="text-xl font-semibold text-indigo-800 mb-2">{proj.title}</h3>
-                                    <p className="text-gray-700 mb-4">{proj.desc}</p>
+                    {loading ? (
+                        <p className="text-center text-gray-600">Loading projects...</p>
+                    ) : (
+                        /* Projects Grid */
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {projects.map((proj) => (
+                                <div
+                                    key={proj.id}
+                                    className="bg-white shadow-xl rounded-lg overflow-hidden hover:scale-105 transition cursor-pointer"
+                                    onClick={() => setModalOpen(proj.id)}>
+                                    <img
+                                        src={proj.img}
+                                        alt={proj.title}
+                                        className="w-full h-48 object-cover" />
+                                    <div className="p-6">
+                                        <h3 className="text-xl font-semibold text-indigo-800 mb-2">{proj.title}</h3>
+                                        <p className="text-gray-700 mb-4">{proj.desc}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
-                    </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </section>
 
