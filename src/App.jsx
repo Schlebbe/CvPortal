@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Portfolio from './components/Portfolio';
@@ -21,7 +21,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
 
       <Routes>
@@ -34,7 +34,7 @@ function App() {
       <EasterEggModal />
 
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
