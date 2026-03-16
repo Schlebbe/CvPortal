@@ -44,7 +44,7 @@ function EasterEggModal() {
                     You typed "1337"! Sebastian's spaghetti code has fully awakened.
                     The cosmos bows to your elite skills.
                 </p>
-                <img src="https://placeholdpicsum.dev/photo/seed/alien/150/150" alt="Alien" class="mx-auto" />
+                <img src="https://placeholdpicsum.dev/photo/seed/alien/150/150" alt="Alien" className="mx-auto" />
             </div>
         </div>
     );
